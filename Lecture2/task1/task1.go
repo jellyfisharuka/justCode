@@ -1,20 +1,25 @@
 package main
-func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-    if list1 == nil {
-        return list2
-    }
-    if list2 == nil {
-        return list1
-    }
-    if list1.Val <= list2.Val {
-        list1.Next = mergeTwoLists(list1.Next, list2)
-        return list1
-    }
-    list2.Next = mergeTwoLists(list1, list2.Next)
-    return list2
+
+import "fmt"
+
+func intToRoman(num int) string {
+	var res string = ""
+	var romanS map[int]string = map[int]string{1000: "M", 900: "CM", 500: "D", 400: "CD", 100: "C", 90: "XC", 50: "L", 40: "XL", 10: "X", 9: "IX", 5: "V", 4: "IV", 1: "I"}
+	var keys = []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
+
+	for i := 0; i < len(keys); i++ {
+		for num >= keys[i] {
+			num -= keys[i]
+			res += romanS[keys[i]]
+		}
+	}
+
+	return res
 }
+
 func main() {
-	int list1 = [1,2,4], list2 = [1,3,4]
-	int listT = mergeTwoLists(list1, list2);
-	fmt.Print(listT)
+
+	num := 2000
+	roman := intToRoman(num)
+	fmt.Printf("The Roman numeral representation of %d is: %s\n", num, roman)
 }
