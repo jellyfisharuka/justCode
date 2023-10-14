@@ -1,0 +1,18 @@
+{
+    "id": 222,
+    "name": "Aruzhan",
+    "surname": "Keulenzhanova",
+    "age": 19,
+    "password": "admin",
+    "address": {
+        "city": {
+            "cityName": "Almaty",
+            "zipCode": "f12"
+        },
+        "region": {
+            "regionName": "Center",
+            "regionCode": "f22"
+        },
+        "street": "Zhibek zholy"
+    }
+}
