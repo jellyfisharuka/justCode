@@ -1,5 +1,7 @@
 package main
+
 import "fmt"
+
 func longestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {
 		return ""
@@ -10,7 +12,7 @@ func longestCommonPrefix(strs []string) string {
 		for j < len(strs[i]) && j < len(soz) && soz[j] == strs[i][j] {
 			j++
 		}
-		soz = soz[:j]
+		soz = soz[:j] //slicing method
 		if soz == "" {
 			break
 		}
