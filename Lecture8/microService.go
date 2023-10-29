@@ -38,6 +38,10 @@ func CreateEntity(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
+	if newEntity.Id <= 0 {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Id должен быть положительным числом"})
+		return
+	}
 
 	entities = append(entities, newEntity)
 	c.JSON(http.StatusCreated, newEntity)
