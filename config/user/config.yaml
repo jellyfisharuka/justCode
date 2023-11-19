@@ -1,0 +1,30 @@
+app:
+  name: 'go-clean-template'
+  version: '1.0.0'
+http:
+  port: '8080'
+log:
+  level: 'debug'
+Database:
+  Main:
+    Host: '127.0.0.1'
+    Port: '5432'
+    User: 'akhil'
+    Password: '1234'
+    Name: 'dev'
+  Replica:
+    Host: '127.0.0.1'
+    Port: '5432'
+    User: 'akhil'
+    Password: '1234'
+    Name: 'dev'
+  auth:
+    login: 'aruzhan'
+    pass: 'mypass'
+  jwt: 
+   secret_key: auth_secret
+   access_token_ttl: 900
+   refresh_token_ttl: 1800
+  pg:
+   poolmax: 2
+   url : 'postgres://postgres:postgres@localhost:5432/postgres'
