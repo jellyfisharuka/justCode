@@ -1,0 +1,16 @@
+HttpServer:
+  Port: 9233
+  ShutdownTimeout: 2m
+Database:
+  Main:
+    Host: '127.0.0.1'
+    Port: '5432'
+    User: 'akhil'
+    Password: '1234'
+    Name: 'dev'
+  Replica:
+    Host: '127.0.0.1'
+    Port: '5432'
+    User: 'akhil'
+    Password: '1234'
+    Name: 'dev'
